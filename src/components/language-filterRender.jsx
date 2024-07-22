@@ -11,7 +11,7 @@ return (
    <div className="p-4 h-full mt-4 flex flex-wrap gap-4 w-full overflow-scroll">
      {data.filter((article,i)=>{
         return(
-            article.language.includes(selected)
+            article.language?.includes(selected)
         )
      }).map((sel, i)=>{
         return(
@@ -21,7 +21,7 @@ return (
                 <a href={sel.link} className="w-full h-full ">
                      <Image src={sel.image_url?sel.image_url:sel.image_url== (null || undefined)?'/grayscaleNews.jpg':null} alt={sel.title} className="w-full h-full object-cover absolute top-0 left-0 z-10 " width={400} height={800} quality={100} />
                   
-                <Image src={sel.source_icon} alt={sel.title} className='w-10 h-10 object-cover object-center rounded-full z-40 absolute top-2 left-2' width={100} height={100} quality={100}/>
+                <Image src={sel.source_icon?sel.source_icon:sel.source_icon== (null || undefined)?'/grayscaleNews.jpg':null} alt={sel.title} className='w-10 h-10 object-cover object-center rounded-full z-40 absolute top-2 left-2' width={100} height={100} quality={100}/>
                 <div className="z-40 absolute top-16 left-4 text-choice4 backdrop-blur-sm font-semibold">{sel.title}</div>
                 </a>
              <div className="z-40 absolute bottom-0 text-choice4 backdrop-blur-sm font-semibold left-4">{sel.pubDate}</div>

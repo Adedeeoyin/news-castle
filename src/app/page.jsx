@@ -8,7 +8,6 @@ export default async function Home(){
   const response =  await fetch(`${url}${key}`)
   const resJson = await response?.json()
   const {results: data} = resJson
-  console.log(data)
   
     return (
       <div className="w-full h-screen px-24 mt-48 mb-0 py-10">
