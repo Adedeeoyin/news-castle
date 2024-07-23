@@ -17,7 +17,9 @@ export default function RootLayout({ children }) {
         <body className={font.className}>
       <Api_data>
           <Header/>
+          <div className="dark:text-choice4">
           {children}
+          </div>
       </Api_data>
         </body>
     </html>
