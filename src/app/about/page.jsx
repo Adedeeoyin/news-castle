@@ -1,7 +1,7 @@
 
 const About = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 mt-40">
+    <main className="flex min-h-screen flex-col items-center p-24 max-sm:p-8 mt-40">
       <div className="font-semibold text-lg mb-2">Introduction:</div>
         <div className="text-sm mb-8">Are you seeking a talented frontend developer to bring your digital projects to life? Look no further! I have recently created a news website to demonstrate my skills and passion for frontend development. This project highlights my ability to design, develop, and maintain high-quality, user-friendly websites that not only look great but also perform seamlessly.</div>
 

@@ -1,7 +1,7 @@
 
 const Partner = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 mt-40 text-choice1">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 max-sm:p-8 mt-40 text-choice1 dark:text-choice4">
       
         <div className="font-semibold text-lg mb-2">Why Partner with Me:</div>
 

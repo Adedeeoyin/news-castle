@@ -5,7 +5,7 @@ export default async function Explore(){
   const data = await response?.json()
   
     return (
-      <div className="w-full h-[75vh] mb-24 p-16 flex gap-2 flex-wrap overflow-scroll mt-40">
+      <div className="w-full h-[75vh] mb-24 p-16 max-sm:p-8 flex gap-2 flex-wrap overflow-scroll mt-40">
         {data.map((user,i)=>{
           return(
             <div key={user.id} className="border border-choice1 p-2">
