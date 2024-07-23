@@ -30,13 +30,13 @@ const QueryPage = () => {
     },[query])
     
   return (
-    <div className="flex min-h-screen flex-wrap gap-6 items-center p-24 mt-40">
+    <div className="flex min-h-screen flex-wrap gap-6 items-center p-24 max-sm:p-8 mt-40">
         {error && <div className="text-red-500 mt-48 w-full h-full flex items-center justify-center font-semibold text-2xl">Error Fetching data!</div>}
           {searchData?.results?.map((res,i)=>{
             return(
                 <div
              key={res.article_id}
-              className="w-[40vw] max-sm:w-[80vh] h-48 border-t border-t-gray-50 relative p-1 cursor-pointer shadow-xl hover:bg-choice1 rounded-lg hover:text-choice4">
+              className="w-[40vw] max-sm:w-full h-48 border-t border-t-gray-50 relative p-1 cursor-pointer shadow-xl hover:bg-choice1 rounded-lg hover:text-choice4">
                 <a href={res.link} className="w-full h-full ">
                      <Image src={res.image_url?res.image_url:res.image_url== (null || undefined)?'/grayscaleNews.jpg':null} alt={res.title} className="w-full h-full object-cover absolute top-0 left-0 z-10 " width={400} height={800} quality={100} />
                   

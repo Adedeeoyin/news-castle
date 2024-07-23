@@ -24,7 +24,7 @@ const Header = () => {
           {
             socials.map((soc, i)=>{
               return(
-                <a key={i} href={soc.link} className="text-xl hover:opacity-80">
+                <a key={i} href={soc.link} className="text-xl hover:opacity-80 max-sm:hidden">
                   {soc.name}
                 </a>
               )

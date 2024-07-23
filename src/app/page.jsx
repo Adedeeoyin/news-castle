@@ -10,7 +10,7 @@ export default async function Home(){
   const {results: data} = resJson
   
     return (
-      <div className="w-full h-screen px-24 mt-48 mb-0 py-10">
+      <div className="w-full h-screen px-24 max-sm:p-8 mt-48 mb-0 py-10">
         <div className="flex items-center justify-between">
           <div>
             Language:

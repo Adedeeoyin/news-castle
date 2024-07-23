@@ -17,7 +17,7 @@ return (
         return(
             <div
              key={sel.article_id}
-              className="w-[40vw] max-sm:w-[80vh] h-48 border-t border-t-gray-50 relative p-1 cursor-pointer shadow-xl hover:bg-choice1 rounded-lg hover:text-choice4">
+              className="w-[40vw] max-sm:w-full mx-auto h-48 border-t border-t-gray-50 relative p-1 cursor-pointer shadow-xl hover:bg-choice1 rounded-lg hover:text-choice4">
                 <a href={sel.link} className="w-full h-full ">
                      <Image src={sel.image_url?sel.image_url:sel.image_url== (null || undefined)?'/grayscaleNews.jpg':null} alt={sel.title} className="w-full h-full object-cover absolute top-0 left-0 z-10 " width={400} height={800} quality={100} />
                   
