@@ -16,7 +16,7 @@ const Header = () => {
       ];
   return (
     <header className="w-full fixed z-[99999] mb-20 top-0">
-        <div className="w-full bg-choice1 py-10 px-16 text-choice4 flex justify-between">
+        <div className="w-full bg-choice1 py-10 px-16 max-sm:p-8 text-choice4 flex justify-between">
           <div className="flex flex-col items-center">
             <MdCastle/>
             News Castle

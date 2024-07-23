@@ -18,7 +18,7 @@ const Navbar = () => {
     const pathname = usePathname()
 
   return (
-    <div className="flex items-center justify-around w-full py-2 font-semibold text-2xl text-choice1 bg-white z-[99]">
+    <div className="flex items-center justify-around w-full py-2 font-semibold text-2xl max-sm:text-sm text-choice1 bg-white z-[99]">
         {
             navbar.map((bar, i)=>{
                 return <Link href={bar.path} key={bar.name} className={`${pathname === bar.path?'border-b-4 border-choice2': null} ${font.className}`}>{bar.name}</Link>

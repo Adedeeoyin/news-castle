@@ -21,7 +21,6 @@ const QueryPage = () => {
             const data = await res.json()
             if(data.status === 'error')setError(true)
             if(data.status === 'success') setSearchData(data)
-            console.log(data)
           }
       ,[200]);
       return ()=>{
