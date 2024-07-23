@@ -4,8 +4,6 @@ import { useNewsApi } from '@/context/api-context'
 const Select = ({data}) => {
     const { setSelected, selected,} = useNewsApi()
 
-    // setNewsApi(data)
-
     const handleSelect =(e)=>{
         setSelected(e.target.value)
     }
