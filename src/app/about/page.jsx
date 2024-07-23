@@ -16,7 +16,7 @@ const About = () => {
       <div className="font-semibold text-lg mb-2">About the News Website:</div>
       <div className="text-sm mb-8">My news website is a fully responsive platform built using the latest frontend technologies, including HTML5, CSS3, JavaScript, and frameworks like Next.js. It features a clean, modern design with intuitive navigation, ensuring a great user experience across all devices.</div>
 
-      <div className="font-semibold text-lg"><a href="https://github.com/Iamdodo22/news-castle" className="flex items-center gap-2">link to the project<FaGithub/></a></div>
+      <div className="font-semibold text-lg"><a href="https://github.com/Adedeeoyin/news-castle" className="flex items-center gap-2">link to the project<FaGithub/></a></div>
     </main>
   )
 }
