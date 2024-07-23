@@ -9,18 +9,25 @@ const QueryPage = () => {
     const { ...queryId} = params
     const [ searchData, setSearchData ] = useState()
     const [ error, setError ] = useState(false)
-    // const [ loading, setLoading ] = useState(false)
+    const [ loading, setLoading ] = useState(true)
 
     const query = useMemo(()=>
       queryId[1],[queryId])
 
     useEffect(()=>{
       
+      
         const timer = setTimeout(async ()=>{
+          try{
             const res = await fetch(`${url}${key}&q=${queryId[1]}`)
             const data = await res.json()
             if(data.status === 'error')setError(true)
             if(data.status === 'success') setSearchData(data)
+          }catch(err) {
+            setError(err.message)
+        }finally{
+          setLoading(false)
+        }
           }
       ,[200]);
       return ()=>{
@@ -31,11 +38,17 @@ const QueryPage = () => {
   return (
     <div className="flex min-h-screen flex-wrap gap-6 items-center p-24 max-sm:p-8 mt-40">
         {error && <div className="text-red-500 mt-48 w-full h-full flex items-center justify-center font-semibold text-2xl">Error Fetching data!</div>}
+
+        {loading && <div className="flex flex-col w-full h-[60vh] items-center justify-center">
+                      <div className="w-20 h-20 rounded-full border-y-4 border-t-choice1 border-b-choice2 animate-spin duration-300"></div>
+                      <div className="text-choice1">loading...</div>
+                    </div>}
+
           {searchData?.results?.map((res,i)=>{
             return(
                 <div
              key={res.article_id}
-              className="w-[40vw] max-sm:w-full h-48 border-t border-t-gray-50 relative p-1 cursor-pointer shadow-xl hover:bg-choice1 rounded-lg hover:text-choice4">
+              className="w-[40vw] max-sm:w-full h-48 border-t border-t-gray-50 relative p-1 max-sm:p-4 cursor-pointer shadow-xl hover:bg-choice1 rounded-lg hover:text-choice4">
                 <a href={res.link} className="w-full h-full ">
                      <Image src={res.image_url?res.image_url:res.image_url== (null || undefined)?'/grayscaleNews.jpg':null} alt={res.title} className="w-full h-full object-cover absolute top-0 left-0 z-10 " width={400} height={800} quality={100} />
                   
