@@ -19,7 +19,7 @@ const QueryPage = () => {
       
         const timer = setTimeout(async ()=>{
           try{
-            const res = await fetch(`${url}${key}&qInMeta=${queryId[1]}`)
+            const res = await fetch(`${url}${key}&qInMeta='${queryId[1]}'`)
             const data = await res.json()
             if(data.status === 'error')setError(true)
             if(data.status === 'success') setSearchData(data)

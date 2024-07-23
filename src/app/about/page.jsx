@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -14,6 +15,8 @@ const About = () => {
         Performance Optimization: Leveraged techniques such as lazy loading, code splitting, and caching to ensure fast load times and smooth performance.</div>
       <div className="font-semibold text-lg mb-2">About the News Website:</div>
       <div className="text-sm mb-8">My news website is a fully responsive platform built using the latest frontend technologies, including HTML5, CSS3, JavaScript, and frameworks like Next.js. It features a clean, modern design with intuitive navigation, ensuring a great user experience across all devices.</div>
+
+      <div className="flex items-center font-semibold text-lg"><a href="https://github.com/Iamdodo22/news-castle">link to my profile</a><FaGithub/></div>
     </main>
   )
 }

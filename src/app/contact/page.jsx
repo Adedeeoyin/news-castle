@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa6";
 
 const Contact = () => {
   return (
@@ -5,6 +6,7 @@ const Contact = () => {
       <div className="font-semibold text-lg mb-2">Contact Information:</div>
         <div className="font-semibold text-lg mb-2">Abdulazeez Asimi</div>
         <div className="font-semibold text-lg mb-2">asimiadedoyin@gmail.com</div>
+        <div className="font-semibold text-lg mb-2"><a href="https://github.com/Iamdodo22" className="flex items-center gap-2 hover:underline">Git-hub <FaGithub/></a></div>
     </main>
   )
 }
